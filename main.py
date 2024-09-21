@@ -9,9 +9,11 @@ def _main():
         page = browser.new_page()
         page.goto(URL)
         page.wait_for_timeout(3000)
-        _xpath = "xpath=//li[contains(@class,'dashboard-game')]/*[contains(@class,'dashboard-markets')]"
+        _xpath = "//li[contains(@class,'dashboard-game')]/*[contains(@class,'dashboard-markets')]//button/span[contains(@text,'')]"
         elements = page.query_selector_all(_xpath)
-        print(elements)
+        for element in elements:
+            text = element.inner_text()
+            print(text)
         browser.close()
 
 
