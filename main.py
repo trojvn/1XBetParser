@@ -12,7 +12,7 @@ def _main():
 
 
 def main():
-    pass
+    _main()
 
 
 if __name__ == "__main__":
