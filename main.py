@@ -13,7 +13,7 @@ def _main(p):
         user_data_dir=r"C:\Users\trojvn\AppData\Local\Google\Chrome\User Data",
         headless=False,
         channel="chrome",
-        args=["--profile-directory=Ghost"],
+        args=["--profile-directory=Default"],
     )
     page = browser.new_page()
     page.goto(URL)
