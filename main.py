@@ -9,7 +9,9 @@ def __main():
 
 
 def _main(p):
-    browser = p.chromium.launch_persistent_context(user_data_dir="./Profile1")
+    browser = p.chromium.launch_persistent_context(
+        user_data_dir="./Profile1", headless=False
+    )
     page = browser.new_page()
     page.goto(URL)
     page.wait_for_timeout(3000)
