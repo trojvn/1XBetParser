@@ -10,7 +10,7 @@ def __main():
 
 def _main(p):
     browser = p.chromium.launch_persistent_context(
-        user_data_dir="./Profile1", headless=False
+        user_data_dir="./Profile1", headless=False, channel="chrome"
     )
     page = browser.new_page()
     page.goto(URL)
