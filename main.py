@@ -9,7 +9,7 @@ def __main():
 
 
 def _main(p):
-    browser = p.chromium.launch(headless=False)
+    browser = p.chromium.launch()
     page = browser.new_page()
     page.goto(URL)
     page.wait_for_timeout(3000)
