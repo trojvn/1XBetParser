@@ -9,7 +9,7 @@ def _main():
         page = browser.new_page()
         page.goto(URL)
         page.wait_for_timeout(3000)
-        _xpath = "xpath=//li[contains(@class,'dashboard-game')]"
+        _xpath = "xpath=//li[contains(@class,'dashboard-game')]/*[contains(@class,'dashboard-markets')]"
         elements = page.query_selector_all(_xpath)
         print(elements)
         browser.close()
