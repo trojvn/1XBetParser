@@ -19,9 +19,9 @@ def _main(p):
     elements_url = page.query_selector_all(_xpath)
     for element in elements_url:
         href = element.get_attribute("href")
-        cf1 = elements_cf.pop().inner_text()
-        _ = elements_cf.pop()
-        cf2 = elements_cf.pop().inner_text()
+        cf1 = elements_cf.pop(-1).inner_text()
+        _ = elements_cf.pop(-1)
+        cf2 = elements_cf.pop(-1).inner_text()
         print(href, cf1, cf2)
     browser.close()
 
