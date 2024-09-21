@@ -10,7 +10,10 @@ def __main():
 
 def _main(p):
     browser = p.chromium.launch_persistent_context(
-        user_data_dir="./Profile1", headless=False, channel="chrome"
+        user_data_dir=r"C:\Users\{os.getlogin()}\AppData\Local\Google\Chrome\User Data",
+        headless=False,
+        channel="chrome",
+        args=["--profile-directory=Profile 1"],
     )
     page = browser.new_page()
     page.goto(URL)
